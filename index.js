@@ -196,8 +196,8 @@ var BrowserStackBrowser = function (
       video: bsConfig.video !== undefined ? bsConfig.video : true
     }
 
-    if (typeof args.real_mobile !== 'undefined') {
-      settings.real_mobile = args.real_mobile
+    if (typeof args.real_mobile !== 'undefined' || typeof args.realMobile !== 'undefined') {
+      settings.real_mobile = args.real_mobile || args.realMobile
     }
 
     tunnel.then(function () {
